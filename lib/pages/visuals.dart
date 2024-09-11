@@ -12,6 +12,7 @@ class Visuals extends StatefulWidget {
 
 class _VisualsState extends State<Visuals> {
   late ChartSeriesController _chartSeriesController;
+
   @override
   void initState() {
     // TODO: implement initState

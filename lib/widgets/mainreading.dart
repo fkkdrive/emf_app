@@ -14,43 +14,24 @@ class _MainReadingState extends State<MainReading> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: 20,
-        ),
         Consumer<MagnitudeProvider>(
           builder: (context, model, child) => Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                width: MediaQuery.of(context).size.width / 2,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      model.magnitude.toStringAsFixed(2),
-                      style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
+              Text(
+                model.magnitude.toStringAsFixed(2),
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                width: MediaQuery.of(context).size.width / 2,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "μTesla",
-                      style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
+              Text(
+                " μTesla",
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
                 ),
-              )
+              ),
             ],
           ),
         )
