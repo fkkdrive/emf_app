@@ -71,7 +71,7 @@ class _MeterReadingState extends State<MeterReading> {
                           GaugeAnnotation(
                             widget: Align(
                               alignment: Alignment.bottomCenter,
-                              heightFactor: 3.0,
+                              heightFactor: 3.5,
                               child: Container(
                                 child: Text(
                                   model.magnitude.toStringAsFixed(2),
