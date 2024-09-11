@@ -24,7 +24,7 @@ class _MeterReadingState extends State<MeterReading> {
                   axes: <RadialAxis>[
                     RadialAxis(
                         minimum: 0,
-                        maximum: 1000,
+                        maximum: 1001,
                         labelOffset: 20,
                         tickOffset: 20,
                         ranges: <GaugeRange>[
@@ -69,11 +69,18 @@ class _MeterReadingState extends State<MeterReading> {
                         ],
                         annotations: <GaugeAnnotation>[
                           GaugeAnnotation(
-                            widget: Container(
-                              child: Text(
-                                model.magnitude.toStringAsFixed(2),
-                                style: TextStyle(
-                                    fontSize: 25, fontWeight: FontWeight.bold),
+                            widget: Align(
+                              alignment: Alignment.bottomCenter,
+                              heightFactor: 3.0,
+                              child: Container(
+                                child: Text(
+                                  model.magnitude.toStringAsFixed(2),
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.amber,
+                                  ),
+                                ),
                               ),
                             ),
                             angle: 90,

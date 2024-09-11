@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:emf_app/models/magnitudeprovider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -18,19 +19,23 @@ class _MainReadingState extends State<MainReading> {
           builder: (context, model, child) => Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
+              AutoSizeText(
                 model.magnitude.toStringAsFixed(2),
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                ),
+                key: GlobalKey(debugLabel: 'unit'),
+                overflow: TextOverflow.ellipsis,
+                maxFontSize: 20,
+                maxLines: 1,
+                minFontSize: 15,
+                style: TextStyle(fontSize: 20, color: Colors.yellow),
               ),
-              Text(
+              AutoSizeText(
                 " μTesla",
-                style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                ),
+                key: GlobalKey(debugLabel: 'unit'),
+                overflow: TextOverflow.ellipsis,
+                maxFontSize: 20,
+                maxLines: 1,
+                minFontSize: 15,
+                style: TextStyle(fontSize: 20, color: Colors.red),
               ),
             ],
           ),
